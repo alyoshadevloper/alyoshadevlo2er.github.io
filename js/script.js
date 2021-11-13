@@ -27,17 +27,47 @@ $(document).ready(function () {
 
     /// ==========  header scroll-menu ==========
 
-    var $links = $('header .navbar .link')
+    // var $links = $('header .navbar .link')
 
-    $links.on('click', function (e) {
-        e.preventDefault()
-        var href = $(this).attr('href')
-        var id = $(href).offset().top - 10
-        console.log(href);
-        $('html , body').animate({
-            scrollTop: id
-        }, 500)
-    })
+    // $links.on('click', function (e) {
+    //     e.preventDefault()
+    //     var href = $(this).attr('href')
+    //     var id = $(href).offset().top - 10
+    //     console.log(href);
+    //     $('html , body').animate({
+    //         scrollTop: id
+    //     }, 500)
+    // })
+
+ /// ==========  header header-menubar ==========
+
+ var closes
+ $('.nav-menu .sort').hover(
+     function () {
+         clearTimeout(closes);
+         $(".nav-menu-list").slideDown();
+     },
+
+     function () {
+         closes = setTimeout(function () {
+             $(".nav-menu-list").slideUp();
+         }, 1000);
+
+
+     })
+ $(".nav-menu-list").hover(
+     //Hover
+     function () {
+         clearTimeout(closes);
+         $(".nav-menu-list").slideDown();
+     },
+     //Hoverout
+     function () {
+         closes = setTimeout(function () {
+             $(".nav-menu-list").slideUp();
+         }, 0);
+     });
+
 
     /// ==========  header>.scroll-top ==========
     var top = $('.scroll-top')

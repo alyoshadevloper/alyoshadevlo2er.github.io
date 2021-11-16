@@ -1,6 +1,12 @@
 /* ================== header_starting ==================  */
 
- 
+header {
+  /* control-panel  */
+  /* navbar-menu  */
+  /* header-menubar  */
+  /* scroll-top  */
+  /* owl-carousel  */
+}
 
 header .setting {
   display: -webkit-box;
@@ -254,9 +260,9 @@ header .header-menubar .nav-menu-list ul li a {
 header .scroll-top {
   position: fixed;
   top: 600px;
-  right: 100px;
+  right: 80px;
   background: #00467a;
-  padding: 10px;
+  padding: 20px;
   border-radius: 50%;
   display: none;
   z-index: 11111;
@@ -265,7 +271,7 @@ header .scroll-top {
 header .scroll-top a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -436,56 +442,6 @@ section .about .about_text .text p {
   text-align: justify;
 }
 
-section .product {
-  margin-top: 100px;
-}
-
-section .product .owl-carousel {
-  margin-top: 50px;
-  position: relative;
-}
-
-section .product .owl-carousel .owl-dot {
-  display: none;
-}
-
-section .product .owl-carousel .owl-nav button {
-  background: transparent;
-  border: none;
-  font-size: 70px;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #f49d37;
-}
-
-section .product .owl-carousel .owl-nav .owl-prev {
-  position: absolute;
-  top: 20%;
-  left: -15%;
-}
-
-section .product .owl-carousel .owl-nav .owl-next {
-  position: absolute;
-  top: 20%;
-  right: -15%;
-}
-
-section .product .owl-carousel .img_product {
-  max-width: 200px;
-  height: 300px;
-}
-
 section .benefits .text {
   text-align: center;
   margin: 50px 0px;
@@ -532,6 +488,55 @@ section .contact .map {
   margin-bottom: 50px;
 }
 
+section .contact .contact-info {
+  text-align: center;
+}
+
+section .contact .contact-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "etelkBold";
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f49d37;
+}
+
+section .contact .contact-info p {
+  color: #000;
+  font-size: 18px;
+  font-family: "etelkLight";
+  font-weight: 700;
+  text-align: left;
+}
+
+section .contact .contact-info a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "etelkLight";
+  font-weight: 1700;
+  text-align: center;
+  display: inline-block;
+  color: #000;
+}
+
+section .contact .contact-info a:hover {
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  color: #f49d37;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+section .contact .contact-info .instagram {
+  margin: 0px 15px;
+}
+
+section .contact .contact {
+  margin-top: 40px;
+}
+
 section .cardProduct {
   margin-top: 100px;
 }
@@ -540,6 +545,7 @@ section .cardProduct .card-product {
   width: 100%;
   border: 2px solid #d1d1d1;
   margin: 20px 0px;
+  position: relative;
 }
 
 section .cardProduct .card-product .card-product-img {
@@ -589,12 +595,14 @@ section .cardProduct .card-product .card-product-text {
   padding: 15px;
 }
 
-section .cardProduct .card-product .card-product-text h3 {
-  font-size: 16px;
+section .cardProduct .card-product .card-product-text .text-title {
+  font-size: 15px;
   font-weight: 700;
   text-transform: capitalize;
   margin: 10px 0px;
   line-height: 20px;
+  display: block;
+  text-decoration: none;
 }
 
 section .cardProduct .card-product .card-product-text .price {
@@ -667,63 +675,85 @@ section .cardProduct .card-product .card-product-text .update {
   text-decoration: none;
 }
 
+section .cardProduct .text-title:hover .card-product {
+  -webkit-box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 2px black;
+}
+
 footer {
   width: 100%;
   margin-top: 100px;
   padding-top: 40px;
+  padding-bottom: 40px;
   background: #00467a;
 }
 
-footer .contact-info {
-  text-align: center;
+footer ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
-footer .contact-info h3 {
-  font-size: 24px;
-  font-weight: 700;
-  font-family: "etelkBold";
-  margin-bottom: 20px;
-  text-align: center;
-  color: #f49d37;
+footer ul li {
+  margin: 0px 20px;
 }
 
-footer .contact-info p {
-  color: #fff;
-  font-size: 18px;
-  font-family: "etelkLight";
-  font-weight: 100;
-  text-align: left;
-}
-
-footer .contact-info a {
+footer ul li a {
   text-decoration: none;
   font-size: 18px;
-  font-family: "etelkLight";
-  font-weight: 100;
-  text-align: center;
-  display: inline-block;
-  color: #fff;
-}
-
-footer .contact-info a:hover {
+  font-weight: 500;
+  color: white;
+  -webkit-transition: all 100ms;
+  -o-transition: all 100ms;
+  transition: all 100ms;
+  display: block;
+  padding: 5px 0px;
+  overflow: hidden;
+  position: relative;
   -webkit-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
+}
+
+footer ul li a:hover {
   color: #f49d37;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
-footer .contact-info .instagram {
-  margin: 0px 15px;
+footer .tel {
+  margin: 15px 0px;
 }
 
-footer .contact {
-  margin-top: 40px;
+footer .tel a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  -webkit-transition: all 100ms;
+  -o-transition: all 100ms;
+  transition: all 100ms;
+  display: block;
+  padding: 5px 0px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  text-align: right;
+  letter-spacing: 6px;
+  margin-right: 20px;
+}
+
+footer .tel a:hover {
+  color: #f49d37;
 }
 
 main {
+  margin-bottom: 80px;
   margin-top: 80px;
 }
 
@@ -770,7 +800,6 @@ main .owl-carousel .owl-nav .owl-next {
 
 main .owl-carousel .img_product {
   max-width: 200px;
-  height: 300px;
   position: relative;
 }
 
@@ -811,10 +840,6 @@ main .owl-carousel .img_product:hover .text-carousel {
   opacity: 1;
 }
 
-*:hover {
-  cursor: pointer;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -842,7 +867,21 @@ h2 {
   color: #f49d37;
   padding: 15px 0px;
   margin-bottom: 50px;
-  font-family: 'etelkBold';
+  font-family: "etelkBold";
+}
+
+.fixed-nav {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1111;
+  margin-top: -30px;
+}
+
+.active-block {
+  display: block !important;
 }
 
 .header-nav {
@@ -890,6 +929,12 @@ h2 {
   margin: 0px 15px;
 }
 
+@media (min-width: 1200px) {
+  main .owl-carousel .owl-nav {
+    display: block;
+  }
+}
+
 @media (max-width: 1400px) {
   header .navbar .phone a {
     font-size: 16px;
@@ -901,6 +946,10 @@ h2 {
 }
 
 @media (max-width: 1200px) {
+  .header-nav {
+    margin: 0px;
+  }
+
   .nav-xl-col-1 {
     width: calc(100% / 12 * 1);
     height: auto;
@@ -971,16 +1020,16 @@ h2 {
     margin-left: 20px;
   }
 
-  section .product .owl-carousel .owl-nav .owl-prev {
-    left: 0%;
+  main {
+    display: block;
   }
 
-  section .product .owl-carousel .owl-nav .owl-next {
-    right: 0%;
+  main .owl-carousel .owl-nav {
+    display: none;
   }
 
-  section .product .owl-carousel .img_product {
-    height: inherit;
+  .header-nav {
+    margin: 0px 10px;
   }
 
   .nav-lg-col-2 {
@@ -1032,6 +1081,31 @@ h2 {
     width: 100%;
   }
 
+  section .contact .contact-info p {
+    font-size: 16px;
+  }
+
+  section .contact .contact-info p {
+    text-align: center;
+  }
+
+  section .contact .contact-info a {
+    font-size: 16px;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+
+  main {
+    display: none;
+  }
+
+  main .owl-carousel .img_product {
+    max-width: 100px;
+    height: 100px;
+  }
+
   .nav-md-col-12 {
     width: calc(100% / 12 * 12) !important;
     height: auto;
@@ -1052,6 +1126,39 @@ h2 {
 }
 
 @media (max-width: 767px) {
+  header .scroll-top {
+    right: 0px;
+  }
+
+  section .benefits .text {
+    margin: 20px 0px;
+  }
+
+  section .benefits .text p {
+    text-align: justify;
+  }
+
+  section .contact .contact-info h3 {
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  section .contact .contact-info p {
+    text-align: center;
+  }
+
+  section .cardProduct {
+    margin-top: 0px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
   .nav-sm-col-4 {
     width: calc(100% / 12 * 4) !important;
     height: auto;

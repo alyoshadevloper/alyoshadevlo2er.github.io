@@ -1,19 +1,64 @@
 $(document).ready(function () {
-    ////// ========== navbar--close-bars ==========
-    var bars = $(".closes")
-    var menu = $(".nav")
-    var logo = $(".logo")
-    bars.click(function (e) {
-        e.preventDefault()
-        if (logo.parent().css("display") == "block") {
-            logo.parent().css("display", "none")
-            menu.css("display", "flex")
-        } else {
-            logo.parent().css("display", "block")
-            menu.css("display", "none")
-        }
+    /// ==========  header header-menubar ==========
+    var closes
 
-    })
+    function check() {
+        var heightmenu = $(".nav-menu-list ul").innerHeight()
+        if ($(window).width() < 767) {
+            $(".nav-menu-list").css("height", heightmenu)
+        }
+    }
+
+    $('.nav-menu .sort').hover(
+        function () {
+            clearTimeout(closes);
+            $(".nav-menu-list").addClass('active-block')
+            check()
+        },
+
+        function () {
+            closes = setTimeout(function () {
+                $(".nav-menu-list").removeClass("active-block");
+                check()
+            }, 1000);
+        })
+
+    $(".nav-menu-list").hover(
+        function () {
+            clearTimeout(closes);
+            $(".nav-menu-list").addClass("active-block");
+            check()
+        },
+
+        function () {
+            closes = setTimeout(function () {
+                $(".nav-menu-list").removeClass("active-block");
+                check()
+            }, 0);
+        });
+
+    /// ==========  header nav-fixed ==========
+    var $header = $('header')
+    var $nav = $('.header-menubar')
+    var flag = false
+
+    function fixed() {
+        if (scrollY >= $header.innerHeight() && !flag) {
+            $nav.addClass('fixed-nav').css('opactiy', 0).animate({
+                opacity: 1
+            }, 1000)
+            flag = true
+        } else if (scrollY < $header.innerHeight() && flag) {
+            $nav.animate({
+                opacity: 0
+            }, 1000, function () {
+                $nav.removeClass('fixed-nav').css('opacity', 1)
+            })
+            flag = false
+        }
+    }
+    $(window).on('scroll', fixed)
+    fixed()
     /// ==========  header owl-carousel ==========
 
     $("header .owl-carousel").owlCarousel({
@@ -24,50 +69,6 @@ $(document).ready(function () {
         autoplay: true,
         autoplayHoverPause: true
     });
-
-    /// ==========  header scroll-menu ==========
-
-    // var $links = $('header .navbar .link')
-
-    // $links.on('click', function (e) {
-    //     e.preventDefault()
-    //     var href = $(this).attr('href')
-    //     var id = $(href).offset().top - 10
-    //     console.log(href);
-    //     $('html , body').animate({
-    //         scrollTop: id
-    //     }, 500)
-    // })
-
- /// ==========  header header-menubar ==========
-
- var closes
- $('.nav-menu .sort').hover(
-     function () {
-         clearTimeout(closes);
-         $(".nav-menu-list").slideDown();
-     },
-
-     function () {
-         closes = setTimeout(function () {
-             $(".nav-menu-list").slideUp();
-         }, 1000);
-
-
-     })
- $(".nav-menu-list").hover(
-     //Hover
-     function () {
-         clearTimeout(closes);
-         $(".nav-menu-list").slideDown();
-     },
-     //Hoverout
-     function () {
-         closes = setTimeout(function () {
-             $(".nav-menu-list").slideUp();
-         }, 0);
-     });
-
 
     /// ==========  header>.scroll-top ==========
     var top = $('.scroll-top')
@@ -88,12 +89,26 @@ $(document).ready(function () {
     /// ==========  section>product owl-carousel ==========
 
     $(".product .owl-carousel").owlCarousel({
-        items: 6,
+        items: 7,
         nav: true,
         loop: true,
         autoplay: true,
+        responsive: {
+            992: {
+                items: 5,
+                margin: 0
+            },
+            1200: {
+                items: 7
+            },
 
+
+        }
     });
-
-
+    document.querySelectorAll('.price .sum').forEach(element => {
+        element.textContent = new Intl.NumberFormat('uz-Uz', {
+            currency: "UZS",
+            style: 'currency'
+        }).format(element.textContent)
+    });;
 });

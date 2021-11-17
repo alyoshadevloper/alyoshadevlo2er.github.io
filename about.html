@@ -16,25 +16,26 @@
 </head>
 
 <body>
-    <!-- ================== header_starting ================== -->
-    <header>
-        <!-- control-panel -->
+    <!-- ======================= header_starting ======================= -->
 
+    <header >
+        <div class="preloader">
+            <img src="./img/logoPreloader.png" alt="">
+            <h4>Distarsys</h4>
+            <p>0%</p>
+        </div>
         <div class="setting header-nav">
             <a href="#">Добавить</a>
             <a href="#!">настройка</a>
         </div>
-
         <!-- navbar-menu -->
-
         <nav class="navbar">
             <div class="header-nav">
-                <div
-                    class="nav-flex align-items-center justify-content-sm-between justify-content-md-center justify-content-lg-between">
-                    <div class="nav-col-1 nav-lg-col-2 nav-sm-col-4 nav-md-col-5  ">
+                <div class="nav-flex align-items-center justify-content-between">
+                    <div class="nav-col-1">
                         <a href="/" class="logo"><img src="./img/logoHeader.png" alt=""></a>
                     </div>
-                    <div class="nav-col-7  nav-sm-col-12 order-1 order-md-2  nav-md-col-8 order-lg-0">
+                    <div class="nav-col-7">
                         <div class="search">
                             <form action="#!">
                                 <input type="text" name="" id="" placeholder="Найти">
@@ -42,8 +43,7 @@
                             </form>
                         </div>
                     </div>
-                    <div
-                        class="nav-col-3  order-md-1 nav-md-col-5 order-lg-0 d-flex align-items-center justify-content-end justify-content-lg-between">
+                    <div class="nav-col-3 d-flex align-items-center justify-content-between">
                         <div class="shopBags">
                             <a href="#1`">
                                 <i class="fas fa-shopping-bag">
@@ -52,29 +52,25 @@
                                 <span class="text-shopBags">Корзина</span>
                             </a>
                         </div>
-                        <div class="phone d-none d-md-block">
+                        <div class="phone">
                             <a href="tel:+998977043343">(97) 704-33-43</a>
                         </div>
                     </div>
 
                 </div>
             </div>
-
         </nav>
 
-        <!-- header-menubar -->
-
-        <div class="header-menubar">
+        <div class="header-menubar ">
             <div class="nav-menu">
                 <div class="container header-menubars">
                     <div class="row">
                         <div class="col-12">
                             <ul class="nav">
-                                <!-- <li> <a href="/" class="logo"><img src="./img/logoHeader.png" alt=""></a></li> -->
-                                <li><a class="sort" href="#2">Категория <i class="fas fa-sort-down"></i></a></li>
+                                <li><a class="sort" href="#!">Категория <i class="fas fa-sort-down"></i></a></li>
                                 <li><a class="link" href="/">Главная</a></li>
                                 <li><a class="link" href="/about.html">О нас</a></li>
-                                <li><a class="link" href="/contact.html">Контакты</a></li>
+                                <li><a class="link" href="./contact.html">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
@@ -84,7 +80,7 @@
             <div class="nav-menu-list">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-md-5">
+                        <div class="col-5">
                             <ul>
                                 <li><a href="/"> Телевизоры, Аудио и Видео</a></li>
                                 <li><a href="/"> Телевизоры, Аудио и Видео</a></li>
@@ -103,37 +99,38 @@
         </div>
 
         <!-- scroll-top -->
-
         <div class="scroll-top">
             <a href="#!"><i class="fas fa-arrow-up"></i></a>
         </div>
 
-
         <!-- header-carousel -->
+        <div class="header-nasv">
+            <div class="owl-carousel">
 
-        <div class="owl-carousel d-none d-md-block">
-            <div class="hr_item">
-                <img src="./img/h1.jpg" alt="">
-                <div class="hr-item-text">
-                    <h2>Офисная техника</h2>
-                    <a href="tel:+998935489878" class="tel-carousel">Позвонить</a>
+                <div class="hr_item">
+                    <img src="./img/h1.jpg" alt="">
+                    <div class="hr-item-text">
+                        <h2>Офисная техника</h2>
+                        <a href="tel:+998935489878" class="tel-carousel">Позвонить</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hr_item">
-                <img src="./img/h2.jpg" alt="">
-                <div class="hr-item-text">
-                    <h2>компьютерные комплектующие</h2>
-                    <a href="tel:+998935489878" class="tel-carousel">Позвонить</a>
+                <div class="hr_item">
+                    <img src="./img/h2.jpg" alt="">
+                    <div class="hr-item-text">
+                        <h2>компьютерные комплектующие</h2>
+                        <a href="tel:+998935489878" class="tel-carousel">Позвонить</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hr_item">
-                <img src="./img/р3.jpg" alt="">
-                <div class="hr-item-text">
-                    <h2>Электросамокаты и запчасти</h2>
-                    <a href="tel:+998935489878" class="tel-carousel">Позвонить</a>
+                <div class="hr_item">
+                    <img src="./img/р3.jpg" alt="">
+                    <div class="hr-item-text">
+                        <h2>Электросамокаты и запчасти</h2>
+                        <a href="tel:+998935489878" class="tel-carousel">Позвонить</a>
+                    </div>
                 </div>
             </div>
         </div>
+
 
     </header>
  <!-- ======================= section_starting ======================= -->
@@ -174,7 +171,7 @@
        <footer>
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-4">
+                <div class="col-lg-4">
                     <a href="/" class="logo"><img src="./img/logoAbout.jpg" alt=""></a>
                 </div>
                 <div class="col-auto">

@@ -1,4 +1,41 @@
 $(document).ready(function () {
+
+    /// ==========  preloader ==========
+    var $preloader = $('.preloader')
+    var i = 0
+
+    function num() {
+        var rgb = Math.floor(Math.random() * 1000)
+        
+        $('.preloader p').html(i + '%')
+
+        $('.preloader h4').css("color", `#${rgb}`)
+
+
+        i++
+        if (i >= 101) {
+            clearInterval(ds)
+            $preloader.animate({
+                opacity: 0,
+
+            }, 2000, function () {
+                $preloader.css("display", "none")
+            })
+
+        }
+    }
+
+
+
+    var ds = setInterval(function () {
+        num()
+    }, 5);
+
+
+
+
+    
+
     /// ==========  header header-menubar ==========
     var closes
 
@@ -105,6 +142,28 @@ $(document).ready(function () {
 
         }
     });
+
+    /// ==========  section>productInfo owl-carousel ==========
+
+    $(".productInfo .owl-carousel").owlCarousel({
+        items: 5,
+        nav: true,
+        loop: true,
+        autoplay: true,
+        margin : 7
+    });
+
+ /// ==========  section>cardProduct> podrobnie ==========
+    var btnAbout = $('.card-view')
+    btnAbout.on('mouseover' , function() {
+        $(this).addClass('card-product-active') 
+    })
+    btnAbout.on('mouseout' , function() {
+        $(this).removeClass('card-product-active') 
+    })
+
+
+
     document.querySelectorAll('.price .sum').forEach(element => {
         element.textContent = new Intl.NumberFormat('uz-Uz', {
             currency: "UZS",
